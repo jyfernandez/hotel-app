@@ -17,7 +17,7 @@ export class ReservationFormComponent implements OnInit {
     private reservationService: ReservationService,
     private router: Router,
     private activateRoute: ActivatedRoute
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.reservationForm = this.formBuilder.group({
@@ -43,7 +43,7 @@ export class ReservationFormComponent implements OnInit {
       const id = this.activateRoute.snapshot.paramMap.get('id');
 
       if (id) {
-        this.reservationService.updateReservation(id, reservation)
+        this.reservationService.updateReservation(id, reservation);
       } else {
         this.reservationService.addReservation(reservation);
       }

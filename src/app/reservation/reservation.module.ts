@@ -8,6 +8,12 @@ import { HomeModule } from '../home/home.module';
 
 @NgModule({
   declarations: [ReservationFormComponent, ReservationListComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, HomeModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HomeModule,
+  ],
 })
-export class ReservationModule { }
+export class ReservationModule {}
