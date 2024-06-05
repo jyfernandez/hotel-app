@@ -33,7 +33,7 @@
     </div>
 
     <div>
-        <label>Room Number:</label>
+        <label >Room Number:</label>
         <input type="number" formControlName="roomNumber">
         <div *ngIf="reservationForm.get('roomNumber')?.invalid  && reservationForm.get('roomNumber')?.touched">
             Room Number is required.

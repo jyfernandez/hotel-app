@@ -5,13 +5,14 @@ import { ReservationFormComponent } from './reservation-form/reservation-form.co
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "list", component: ReservationListComponent},
-  {path: "new", component: ReservationFormComponent},
+  { path: '', component: HomeComponent },
+  { path: 'list', component: ReservationListComponent },
+  { path: 'new', component: ReservationFormComponent },
+  { path: 'edit/:id', component: ReservationFormComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

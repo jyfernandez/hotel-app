@@ -5,20 +5,18 @@ import { ReservationService } from '../reservation/reservation.service';
 @Component({
   selector: 'app-reservation-list',
   templateUrl: './reservation-list.component.html',
-  styleUrls: ['./reservation-list.component.css']
+  styleUrls: ['./reservation-list.component.css'],
 })
 export class ReservationListComponent implements OnInit {
+  reservations: Reservation[] = [];
 
-  reservations: Reservation [] = [];
+  constructor(private reservationService: ReservationService) {}
 
-  constructor(private reservationService: ReservationService){}
-  
   ngOnInit(): void {
-    this.reservations = this.reservationService.getReservations();  
+    this.reservations = this.reservationService.getReservations();
   }
 
-  deleteReservation(id: string){
+  deleteReservation(id: string) {
     this.reservationService.deleteReservation(id);
   }
-
 }
