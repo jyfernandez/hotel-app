@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ReservationFormComponent } from './reservation-form.component';
+import { ReservationFormComponent } from "./reservation-form.component";
 
-describe('ReservationFormComponent', () => {
+describe("ReservationFormComponent", () => {
   let component: ReservationFormComponent;
   let fixture: ComponentFixture<ReservationFormComponent>;
 
@@ -15,7 +15,7 @@ describe('ReservationFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

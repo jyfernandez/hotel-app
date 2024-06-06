@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { Reservation } from '../models/reservation';
+import { Injectable } from "@angular/core";
+import { Reservation } from "../models/reservation";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ReservationService {
   private reservations: Reservation[] = [];
 
   constructor() {
-    const saveReservations = localStorage.getItem('reservations');
+    const saveReservations = localStorage.getItem("reservations");
     this.reservations = saveReservations ? JSON.parse(saveReservations) : [];
   }
 
@@ -26,14 +26,14 @@ export class ReservationService {
     reservation.id = Date.now().toString();
 
     this.reservations.push(reservation);
-    localStorage.setItem('reservations', JSON.stringify(this.reservations));
+    localStorage.setItem("reservations", JSON.stringify(this.reservations));
   }
 
   deleteReservation(id: string): void {
     const index = this.reservations.findIndex(res => res.id === id);
 
     this.reservations.splice(index, 1);
-    localStorage.setItem('reservations', JSON.stringify(this.reservations));
+    localStorage.setItem("reservations", JSON.stringify(this.reservations));
   }
 
   updateReservation(id: string, updatedReservation: Reservation): void {
@@ -41,6 +41,6 @@ export class ReservationService {
 
     updatedReservation.id = id;
     this.reservations[index] = updatedReservation;
-    localStorage.setItem('reservations', JSON.stringify(this.reservations));
+    localStorage.setItem("reservations", JSON.stringify(this.reservations));
   }
 }
